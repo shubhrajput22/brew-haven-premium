@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Haven Cafe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=Playfair+Display:ital@0;1&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="coffee-loader"></div>
+        <div class="preloader-text">BREWING</div>
+    </div>
+
+    <div class="film-grain"></div>
+
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">BREW HAVEN CAFE</div>
+            <nav class="desktop-nav">
+                <a href="#menu">Menu</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#visit">Visit</a>
+            </nav>
+            <div class="header-right">
+                <div class="status-pill">OPEN TODAY</div>
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay">
+        <nav class="mobile-nav">
+            <a href="#menu" class="mobile-link">Menu</a>
+            <a href="#gallery" class="mobile-link">Gallery</a>
+            <a href="#visit" class="mobile-link">Visit</a>
+        </nav>
+    </div>
+
+    <main>
+        <section class="hero-section" id="hero">
+            <div class="hero-background"></div>
+            <canvas id="steam-canvas"></canvas>
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <div class="hero-label">Artisan Coffee Experience</div>
+                <h1 class="hero-heading">SLOW BREWED,<br>PERFECT MOMENTS</h1>
+                <p class="hero-subtext">Warm coffee, calm spaces, and handcrafted flavors.</p>
+                <div class="hero-buttons">
+                    <a href="#menu" class="btn btn-primary">View Menu</a>
+                    <a href="#visit" class="btn btn-secondary">Visit Cafe</a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+            <button class="hero-scroll-btn" id="hero-unlock-btn" aria-label="Enter Cafe">Scroll Down</button>
+        </section>
+
+        <section class="menu-section" id="menu">
+            <div class="menu-container">
+                <div class="menu-header">
+                    <div class="menu-label">Discover the taste</div>
+                    <h2 class="menu-heading">COFFEE THAT FEELS LIKE HOME</h2>
+                </div>
+
+                <div class="menu-board tilt-board">
+                    <div class="menu-board-inner">
+                        <!-- Left side image to make the menu highly stylish -->
+                        <div class="menu-feature-image">
+                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop"
+                                alt="Coffee Aesthetic">
+                        </div>
+
+                        <!-- Right side text menu -->
+                        <div class="menu-list">
+                            <div class="menu-category">
+                                <h3 class="category-title">HOT COFFEES</h3>
+                                <div class="menu-item">
+                                    <div class="item-header">
+                                        <div class="item-title-wrap">
+                                            <span class="item-name">Classic Espresso</span>
+                                            <span class="premium-badge badge-gold">Bestseller</span>
+                                        </div>
+                                        <span class="leader-dots"></span>
+                                        <span class="item-price">₹120</span>
+                                    </div>
+                                    <p class="item-desc">Rich, bold, and intense single shot.</p>
+                                </div>
+                                <div class="menu-item">
+                                    <div class="item-header">
+                                        <span class="item-name">Cappuccino</span>
+                                        <span class="leader-dots"></span>
+                                        <span class="item-price">₹150</span>
+                                    </div>
+                                    <p class="item-desc">Espresso with steamed milk and thick foam.</p>
+                                </div>
+                                <div class="menu-item">
+                                    <div class="item-header">
+                                        <span class="item-name">Cafe Latte</span>
+                                        <span class="leader-dots"></span>
+                                        <span class="item-price">₹160</span>
+                                    </div>
+                                    <p class="item-desc">Smooth espresso with generous steamed milk.</p>
+                                </div>
+                                <div class="menu-item">
+                                    <div class="item-header">
+                                        <span class="item-name">Mocha</span>
+                                        <span class="leader-dots"></span>
+                                        <span class="item-price">₹180</span>
+                                    </div>
+                                    <p class="item-desc">Espresso mixed with premium cocoa.</p>
+                                </div>
+                            </div>
+
+                            <div class="menu-category">
+                                <h3 class="category-title">COLD BEVERAGES</h3>
+                                <div class="menu-item">
+                                    <div class="item-header">
+                                        <span class="item-name">Iced Americano</span>
+                                        <span class="leader-dots"></span>
+                                        <span class="item-price">₹140</span>
+                                    </div>
+                                    <p class="item-desc">Chilled espresso over water and ice.</p>
+                                </div>
+                                <div class="menu-item">
+                                    <div class="item-header">
+                                        <div class="item-title-wrap">
+                                            <span class="item-name">Signature Cold Brew</span>
+                                            <span class="premium-badge badge-dark">Signature</span>
+                                        </div>
+                                        <span class="leader-dots"></span>
+                                        <span class="item-price">₹180</span>
+                                    </div>
+                                    <p class="item-desc">Steeped for 18 hours for a smooth finish.</p>
+                                </div>
+                                <div class="menu-item">
+                                    <div class="item-header">
+                                        <span class="item-name">Iced Caramel Macchiato</span>
+                                        <span class="leader-dots"></span>
+                                        <span class="item-price">₹190</span>
+                                    </div>
+                                    <p class="item-desc">Vanilla, milk, espresso, and caramel drizzle.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section" id="story">
+            <div class="story-container">
+                <div class="story-visual fade-in">
+                    <div class="story-parallax">
+                        <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?q=80&w=1200&auto=format&fit=crop" alt="Brew Haven Atmosphere">
+                        <div class="story-glow"></div>
+                    </div>
+                </div>
+                <div class="story-content fade-in">
+                    <div class="story-label">Our Philosophy</div>
+                    <h2 class="story-heading">MORE THAN COFFEE</h2>
+                    <p class="story-text">A space where conversations slow down and moments become memories. We believe in the art of handcrafting every cup with passion, creating a warm sanctuary in the heart of the city.</p>
+                    
+                    <div class="story-features">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            </div>
+                            <div class="feature-title">Since 2018</div>
+                            <div class="feature-desc">Perfecting our craft</div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                            </div>
+                            <div class="feature-title">Freshly Brewed</div>
+                            <div class="feature-desc">New batch daily</div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                            </div>
+                            <div class="feature-title">Handcrafted</div>
+                            <div class="feature-desc">Artisan quality</div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                            </div>
+                            <div class="feature-title">Locally Loved</div>
+                            <div class="feature-desc">Community staple</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section" id="gallery">
+            <div class="gallery-container">
+                <h2 class="gallery-heading">MOMENTS AT BREW HAVEN</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item featured fade-in">
+                        <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=800&auto=format&fit=crop"
+                            alt="Coffee pouring">
+                    </div>
+                    <div class="gallery-item fade-in">
+                        <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?q=80&w=800&auto=format&fit=crop"
+                            alt="Latte art">
+                    </div>
+                    <div class="gallery-item fade-in">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800&auto=format&fit=crop"
+                            alt="Cafe interior">
+                    </div>
+                    <!-- Added Croissant photo clearly here -->
+                    <div class="gallery-item fade-in">
+                        <img src="croissant.png" alt="Fresh Butter Croissant">
+                    </div>
+                    <div class="gallery-item fade-in">
+                        <img src="https://images.unsplash.com/photo-1481833761820-0509d3217039?q=80&w=800&auto=format&fit=crop"
+                            alt="Coffee beans">
+                    </div>
+                    <div class="gallery-item featured fade-in">
+                        <img src="https://images.unsplash.com/photo-1509315811345-672d83ef2fbc?q=80&w=800&auto=format&fit=crop"
+                            alt="Cafe setup">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="online-order-section" id="order">
+            <div class="order-container">
+                <h2 class="order-heading">Order From Your Favorite Platform</h2>
+                <p class="order-subtext">Freshly brewed coffee and handcrafted bites delivered to your doorstep.</p>
+                <div class="order-buttons">
+                    <a href="https://swiggy.com" target="_blank" class="btn btn-swiggy">Swiggy</a>
+                    <a href="https://zomato.com" target="_blank" class="btn btn-zomato">Zomato</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" id="visit">
+            <div class="cta-container">
+                <h2 class="cta-heading">READY FOR YOUR NEXT COFFEE BREAK?</h2>
+                <p class="cta-subtext">Visit Brew Haven and enjoy every sip.</p>
+                <div class="cta-buttons">
+                    <a href="https://www.google.com/maps/search/?api=1&query=avani+icon,+haridarshan+cross+road,+ahmedabad,+gujarat"
+                        target="_blank" class="btn btn-primary">Get Directions</a>
+                    <a href="https://wa.me/919081108102?text=Hi%20Brew%20Haven,%20I'd%20like%20to%20place%20an%20order." target="_blank"
+                        class="btn btn-whatsapp">WhatsApp Contact</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-ambient-light"></div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand -->
+                <div class="footer-col brand-col">
+                    <h3 class="footer-logo">BREW HAVEN CAFE</h3>
+                    <p class="footer-desc">Slow brewed coffee, warm conversations, and handcrafted experiences inspired
+                        by modern cafe culture.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/919081108102?text=Hi%20Brew%20Haven,%20I'd%20like%20to%20place%20an%20order." target="_blank" class="social-icon" aria-label="WhatsApp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z">
+                                </path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col links-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Experience</a></li>
+                        <li><a href="#menu">Signature Menu</a></li>
+                        <li><a href="#gallery">Atmosphere & Gallery</a></li>
+                        <li><a href="#visit">Visit Us</a></li>
+                        <li><a href="#order">Order Online</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Hours -->
+                <div class="footer-col hours-col">
+                    <h4 class="footer-heading">Opening Hours</h4>
+                    <ul class="hours-list">
+                        <li>
+                            <span class="day">Mon – Fri</span>
+                            <span class="separator"></span>
+                            <span class="time">8 AM – 11 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Saturday</span>
+                            <span class="separator"></span>
+                            <span class="time">8 AM – Midnight</span>
+                        </li>
+                        <li>
+                            <span class="day">Sunday</span>
+                            <span class="separator"></span>
+                            <span class="time">9 AM – 10 PM</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div class="footer-col contact-col">
+                    <h4 class="footer-heading">Visit Us</h4>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <p>Brew Haven Cafe<br>SG Highway, Ahmedabad<br>Gujarat, India</p>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            <p>+91 90811 08102</p>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <p>hello@brewhaven.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>© 2026 Brew Haven Cafe. Crafted in Ahmedabad.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span class="legal-sep"></span>
+                    <a href="#">Terms of Service</a>
+                </div>
+                <div class="footer-tagline">
+                    <p>Designed for modern cafe experiences</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
