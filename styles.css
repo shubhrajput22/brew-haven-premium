@@ -1481,25 +1481,26 @@ a {
   .gallery-section { padding: 5rem 1rem; }
   .gallery-heading { margin-bottom: 2.5rem; }
   .gallery-grid { 
-    display: block;
-    column-count: 2;
-    column-gap: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
   }
   .gallery-item { 
     display: block;
-    break-inside: avoid;
-    margin-bottom: 12px;
+    margin-bottom: 0;
     border-radius: 12px;
     width: 100%;
-    height: auto;
-    aspect-ratio: auto;
+    height: 100%;
   }
-  .gallery-item:nth-child(1) { aspect-ratio: 16/10; column-span: all; margin-bottom: 12px; }
-  .gallery-item:nth-child(2) { aspect-ratio: 4/5; }
-  .gallery-item:nth-child(3) { aspect-ratio: 1/1; }
-  .gallery-item:nth-child(4) { aspect-ratio: 3/4; }
-  .gallery-item:nth-child(5) { aspect-ratio: 4/5; }
-  .gallery-item:nth-child(6) { aspect-ratio: 16/10; column-span: all; margin-top: 12px; }
+  .gallery-item:nth-child(1) { aspect-ratio: 16/10; grid-column: span 2; }
+  .gallery-item:nth-child(2),
+  .gallery-item:nth-child(3),
+  .gallery-item:nth-child(4),
+  .gallery-item:nth-child(5) {
+    aspect-ratio: 1/1;
+    grid-column: span 1;
+  }
+  .gallery-item:nth-child(6) { aspect-ratio: 16/10; grid-column: span 2; }
   
   /* Online Order */
   .online-order-section { padding: 5rem 1.5rem; }
